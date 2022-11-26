@@ -6,6 +6,7 @@
     color: white;
     padding: 5px;
     font-size: 16px;
+    max-width: calc(100vw - 60px);
 }
 
 .code > noscript {
