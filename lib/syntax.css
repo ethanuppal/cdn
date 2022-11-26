@@ -1,0 +1,14 @@
+/* Copyright (C) Ethan Uppal 2022. All rights reserved. */
+
+.code {
+    overflow: scroll;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.code > noscript {
+    font-family: sans-serif;
+    color: red;
+}
