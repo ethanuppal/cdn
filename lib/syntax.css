@@ -9,6 +9,35 @@
     max-width: calc(100vw - 60px);
 }
 
+.code-wrap {
+    white-space: pre-wrap;
+}
+
+.code-c > .function {
+    color: pink;
+}
+
+.code-c > .constant {
+    font-weight: bold;
+}
+
+.code-c > .type {
+    color: #D080D0;
+}
+
+.code-c > .keyword, .code-c > .include > .keyword {
+    color: #80C000;
+    font-weight: bold;
+}
+
+.code-c > .number {
+    color: yellow;
+}
+
+.code-c > .string, .code-c > .include {
+    color: orange;
+}
+
 .code > noscript {
     font-family: sans-serif;
     color: red;
