@@ -38,6 +38,10 @@
     color: orange;
 }
 
+.code-c > .comment {
+    color: #808080;
+}
+
 .code > noscript {
     font-family: sans-serif;
     color: red;
