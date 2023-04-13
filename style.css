@@ -1,0 +1,11 @@
+/* Copyright (C) 2023 Ethan Uppal. All rights reserved. */
+
+.library {
+    background-color: #303030;
+    padding: 8px 8px 4px 8px;
+    margin-bottom: 16px;
+}
+
+.library h2 {
+    margin-top: 0px;
+}

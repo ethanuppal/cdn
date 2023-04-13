@@ -1,9 +1,11 @@
+<!-- Copyright (C) 2023 Ethan Uppal. All rights reserved. -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://ethanuppal.github.io/style.css">
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="lib/syntax.css">
         <script src="lib/syntax.js"></script>
         <script src="lib/autosyntax.js"></script>
@@ -13,7 +15,7 @@
         <div class="container">
             <p>This page lists all the libraries that this cdn can deliver. The files may not be minified.</p>
             <div class="library" id="syntax-highlighting">
-                <p><b>Syntax Highlighting</b></p>
+                <h2>Syntax Highlighting</h2>
                 <p>Load the following files on your webpage.</p>
                 <ul>
                     <li><a href="lib/syntax.js">lib/syntax.js</a></li>
@@ -39,6 +41,21 @@ int main() {
 int main() {
     printf("Hello, world\n");
 }</pre>
+            </div>
+            <div class="library" id="footnotes">
+                <h2>Footnotes</h2>
+                <p>Load the following file on your webpage.</p>
+                <ul>
+                    <li><a href="lib/footnote.js">lib/syntax.js</a></li>
+                </ul>
+                <p>Set up a location on the page where footnotes will be placed.</p>
+                <pre class="code code-html">&#x3C;ol id=&#x22;citation-list&#x22;&#x3E;&#x3C;/ol&#x3E;</pre>
+                <p>Then create inline footnotes using a special <code>&lt;span&gt;</code> element.</p>
+                <pre class="code code-html">&#x3C;span data-cite
+    n=&#x22;1&#x22;
+    text=&#x22;This is some text&#x22;
+    href=&#x22;https://www.thisisalink.com&#x22; rel=&#x22;nofollow&#x22; target=&#x22;_blank&#x22;&#x3E;&#x3C;/span&#x3E;</pre>
+                <p>Only <code>data-cite</code> and either of <code>text</code> or <code>href</code> are necessary. To supply a custom number for the footnote, set <code>n</code> (the default is a basic counter). You can set <code>rel</code> and <code>target</code> to modify the properties of the resulting link when supplying <code>href</code>.</p>
             </div>
             <p class="copyright">Copyright (C) 2023 Ethan Uppal. All rights reserved.</p>
         </div>
