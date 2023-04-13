@@ -1,7 +1,7 @@
 /* Copyright (C) Ethan Uppal 2022. All rights reserved. */
 
 .code {
-    overflow: scroll;
+    overflow: auto;
     background-color: black;
     color: white;
     padding: 5px;
