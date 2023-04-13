@@ -25,7 +25,7 @@
     color: #D080D0;
 }
 
-.code-c > .keyword {
+.code-c > .keyword, .code-c .include > .keyword {
     color: #80C000;
     font-weight: bold;
 }
