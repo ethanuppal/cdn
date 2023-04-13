@@ -4,19 +4,42 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://ethanuppal.github.io/style.css">
+        <link rel="stylesheet" href="lib/syntax.css">
+        <script src="lib/syntax.js"></script>
+        <script src="lib/autosyntax.js"></script>
         <title>Ethan Uppal's CDN</title>
     </head>
     <body>
         <div class="container">
             <p>This page lists all the libraries that this cdn can deliver. The files may not be minified.</p>
-            <p><b>Syntax Highlighting</b></p>
-            <p>Load the following files on your webpage.</p>
-            <ul>
-                <li><a href="lib/syntax.js">lib/syntax.js</a></li>
-                <li><a href="lib/syntax.css">lib/syntax.css</a></li>
-                <li><a href="lib/autosyntax.js">lib/autosyntax.js</a> (optional, but recommended)</li>
-            </ul>
-            <p>Then, indicate which <code>&lt;pre&gt;</code> tags should be highlighted by adding <code>code</code> to their class. In addition, add the specific language that the block should be highlighted in, e.g., <code>code-c</code>. If the autosyntax file is not included, you must have manual calls to highlight each block.</p>
+            <div class="library" id="syntax-highlighting">
+                <p><b>Syntax Highlighting</b></p>
+                <p>Load the following files on your webpage.</p>
+                <ul>
+                    <li><a href="lib/syntax.js">lib/syntax.js</a></li>
+                    <li><a href="lib/syntax.css">lib/syntax.css</a></li>
+                    <li><a href="lib/autosyntax.js">lib/autosyntax.js</a> (optional, but recommended)</li>
+                </ul>
+                <p>Then, indicate which <code>&lt;pre&gt;</code> tags should be highlighted by adding <code>code</code> to their class. In addition, add the specific language that the block should be highlighted in, e.g., <code>code-c</code>. If the autosyntax file is not included, you must have manual calls to highlight each block.</p>
+                <p>Example</p>
+                <pre class="code code-html">&#x3C;!-- in your &lt;head&gt; --&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://ethanuppal.github.io/cdn/lib/syntax.css&#x22;&#x3E;
+&#x3C;script src=&#x22;https://ethanuppal.github.io/cdn/lib/syntax.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://ethanuppal.github.io/cdn/lib/autosyntax.js&#x22;&#x3E;&#x3C;/script&#x3E;
+
+&#x3C;!-- in your &lt;body&gt; --&#x3E;
+&#x3C;pre class=&#x22;code code-c&#x22;&#x3E;
+#include &#x3C;stdio.h&#x3E;
+int main() {
+    printf(&#x22;Hello, world\n&#x22;);
+}
+&#x3C;/pre&#x3E;</pre>
+                <p>The above code produces:</p>
+                <pre class="code code-c">#include &#x3C;stdio.h&#x3E;
+int main() {
+    printf("Hello, world\n");
+}</pre>
+            </div>
             <p class="copyright">Copyright (C) 2023 Ethan Uppal. All rights reserved.</p>
         </div>
     </body>

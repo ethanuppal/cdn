@@ -13,33 +13,42 @@
     white-space: pre-wrap;
 }
 
-.code-c > .function {
+.code-c .function {
     color: pink;
 }
 
-.code-c > .constant {
+.code-c .constant {
     font-weight: bold;
 }
 
-.code-c > .type {
+.code-c .type {
     color: #D080D0;
 }
 
-.code-c > .keyword, .code-c > .include > .keyword {
+.code-c .keyword {
     color: #80C000;
     font-weight: bold;
 }
 
-.code-c > .number {
+.code-c .number {
     color: yellow;
 }
 
-.code-c > .string, .code-c > .include {
+.code-c .string, .code-c .include, .code-html .string {
     color: orange;
 }
 
-.code-c > .comment {
+.code-c .comment, .code-html .comment {
     color: #808080;
+}
+
+.code-html > .tag  {
+    color: #F04010;
+    font-weight: bold;
+}
+
+.code-html > .attribute {
+    color: #80C000;
 }
 
 .code > noscript {
