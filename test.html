@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://ethanuppal.github.io/style.css">
+        <link rel="stylesheet" href="lib/syntax.css">
+        <script src="lib/syntax.js"></script>
+        <script src="lib/autosyntax.js"></script>
+        <title>Ethan Uppal's CDN</title>
+    </head>
+    <body>
+        <div class="container">
+            <p>HTML</p>
+            <pre class="code code-html">&#x3C;!-- in your &lt;head&gt; --&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://ethanuppal.github.io/cdn/lib/syntax.css&#x22;&#x3E;
+&#x3C;script src=&#x22;https://ethanuppal.github.io/cdn/lib/syntax.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://ethanuppal.github.io/cdn/lib/autosyntax.js&#x22;&#x3E;&#x3C;/script&#x3E;
+
+&#x3C;!-- in your &lt;body&gt; --&#x3E;
+&#x3C;pre class=&#x22;code code-c&#x22;&#x3E;
+#include &#x3C;stdio.h&#x3E;
+int main() {
+printf(&#x22;Hello, world\n&#x22;);
+}
+&#x3C;/pre&#x3E;</pre>
+            <p>C</p>
+            <pre class="code code-c">#include &#x3C;stdio.h&#x3E;
+int main() {
+    printf("Hello, world\n"); 0 =0 "=0" "0" 1.1 -1 j2
+}</pre>
+<pre class="code code-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;termios.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;poll.h&gt;
+#define I STDIN_FILENO
+#define O STDOUT_FILENO
+#define P printf
+#define U struct termios
+#define E "\033"
+#define Y(x)TC##x##FLUSH
+struct tui{int w;int h;char k;int f;U t;U u;char*b;struct pollfd p;};
+#define tui_begin(T,W,H)T.w=W;T.h=H;P(E"[?25l");T.f=fcntl(I,F_GETFL);tcgetattr(O,&T.t);fcntl(I,F_SETFL,T.f|O_NONBLOCK);T.u=T.t;T.u.c_lflag&=~(ECHO|ICANON);tcsetattr(O,Y(SA),&T.u);T.p.fd=I;T.p.events=POLLIN;T.p.revents=0;T.b=malloc(W*H);memset(T.b,' ',W*H);
+#define tui_end(T) P(E"[?25h");fcntl(I,F_SETFL,T.f);tcsetattr(O,Y(SA),&T.t);free(T.b)
+#define tui_keys(T) T.k=0;if(poll(&T.p,1,5)&gt;0)read(I,&T.k,1)
+#define tui_draw(T) P(E"[H");for(int i=0;i&lt;T.h;i++){for(int j=0;j&lt;T.w;j++)putchar(T.b[i*T.w+j]);putchar('\n');}tcflush(O,Y(IO))</pre>
+<pre class="code code-c">int main(int argc, char const* argv[]) {
+    // Construct the frame buffer.
+    frame_buffer_t frame;
+    frame_buffer_init(&frame, WIDTH, HEIGHT);
+
+    // Cast the rays.
+    mesh3_t meshes[] = {
+        mesh1, mesh2, mesh3_
+    };
+    raycast(&frame, &camera, &space, meshes, lengthof(meshes));
+
+    // Generate ppm file
+    ppm_write_frame(stdout, &frame);
+
+    // Free the frame buffer.
+    frame_buffer_free(&frame);
+
+    return 0;
+}</pre>
+<pre class="code code-c">/// Represents a face in a face-vertex mesh.
+typedef struct {
+    vertex_size_t a;
+    vertex_size_t b;
+    vertex_size_t c;
+} face3_t;
+
+/// Represents a face-vertex mesh.
+typedef struct {
+    vertex_size_t vertex_count;
+    vec3_t* vertex_list;
+
+    size_t face_count;
+    face3_t* face_list;
+
+    color_t color;
+} mesh3_t;</pre>
+        </div>
+    </body>
+</html>

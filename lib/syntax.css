@@ -21,16 +21,16 @@
     font-weight: bold;
 }
 
-.code-c .type {
+.code-c > .type {
     color: #D080D0;
 }
 
-.code-c .keyword {
+.code-c > .keyword {
     color: #80C000;
     font-weight: bold;
 }
 
-.code-c .number {
+.code-c > .number {
     color: yellow;
 }
 
