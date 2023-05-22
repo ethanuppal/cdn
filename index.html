@@ -10,11 +10,19 @@
         <script src="lib/syntax.js"></script>
         <script src="lib/autosyntax.js"></script>
         <script src="lib/footnotes.js"></script>
+        <script src="lib/overlay.min.js"></script>
         <title>Ethan Uppal's CDN</title>
     </head>
     <body>
         <div class="container">
             <p>This page lists all the libraries that this cdn can deliver. The files may not be minified. If you want to use one of these libraries, please give appropriate credit: it's the nice thing to do!</p>
+            <p><b>Library Quick Links</b></p>
+            <ul class="showcase-ul">
+                <li><b><a href="#syntax-highlighting">Syntax highlighting</a></b> that works straight away.</li>
+                <li><b><a href="#footnotes">Footnotes</a></b> (self-explanatory).</li>
+                <li><b><a href="#overlay">Image overlays</a></b> with customizable appearance.</li>
+            </ul>
+            <p>See below for details.</p>
             <div class="library" id="syntax-highlighting">
                 <h2>Syntax Highlighting</h2>
                 <p>Load the following files on your webpage.</p>
@@ -65,7 +73,43 @@ int main() {
                 <h3>Notes</h3>
                 <ol id="citation-list" />
             </div>
+            <div class="library" id="overlay">
+                <h2>Image Overlay</h2>
+                <p>Load the library in your <code>&lt;head&gt;</code>.</p>
+                <pre class="code code-html">&#x3C;script src=&#x22;https://ethanuppal.github.io/cdn/lib/overlay.min.js&#x22;&#x3E;&#x3C;/script&#x3E;</pre>
+                <p>Add <code>overlay-trigger</code> to the class list of a div that contains images. The library will present the first child element that is an image or has the class <code>overlay-image</code>.</p>
+                <pre class="code code-html">&#x3C;div class=&#x22;overlay-trigger&#x22;&#x3E;
+    &#x3C;img src=&#x22;willbepresented.png&#x22; alt=&#x22;Testing 123&#x22;&#x3E;
+    &#x3C;img src=&#x22;image2.jpg&#x22; alt=&#x22;Hello&#x22;&#x3E;
+&#x3C;/div&#x3E;</pre>
+                <p>Finally, load the library with custom styling. Each color must be a valid CSS value for a color attribute.</p>
+                <pre class="code code-js">// This is an abysmal color scheme intended for purposes of example only.
+window.addEventListener(&#x27;load&#x27;, function() {
+    ImageOverlay.load({
+        backgroundColor: &#x27;#0000FF&#x27;,
+        borderColor: &#x27;red&#x27;,
+        borderWidth: &#x27;10px&#x27;,
+        imageBorderColor: &#x27;green&#x27;,
+        imageBorderWidth: &#x27;5px&#x27;
+    });
+});</pre>
+                <p>As a demo, this is Photo 51, the famous picture of the DNA double helix. The file is taken from <a href="https://www-project.slac.stanford.edu/wis/images/photo_51.jpg">Stanford's website</a>. Try clicking on it!</p>
+                <div class="overlay-trigger" style="text-align: center;">
+                    <img src="https://www-project.slac.stanford.edu/wis/images/photo_51.jpg">
+                </div>
+                <p>Unminified source file:</p>
+                <ul>
+                    <li><a href="lib/overlay.js">lib/overlay.js</a></li>
+                </ul>
+            </div>
             <p class="copyright">Copyright (C) 2023 Ethan Uppal. All rights reserved.</p>
+            <script>
+                window.addEventListener('load', function() {
+                    ImageOverlay.load({
+                        imageBorderWidth: '0px'
+                    });
+                });
+            </script>
         </div>
     </body>
 </html>

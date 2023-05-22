@@ -21,11 +21,11 @@
     font-weight: bold;
 }
 
-.code-c > .type {
+.code > .type {
     color: #D080D0;
 }
 
-.code .keyword {
+.code > .keyword {
     color: #80C000;
     font-weight: bold;
 }
@@ -39,7 +39,7 @@
 }
 
 .code .comment {
-    color: #808080;
+    color: #808080 !important;
 }
 
 .code-html > .tag  {
