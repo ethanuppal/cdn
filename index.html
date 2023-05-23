@@ -90,9 +90,11 @@ window.addEventListener(&#x27;load&#x27;, function() {
         borderColor: &#x27;red&#x27;,
         borderWidth: &#x27;10px&#x27;,
         imageBorderColor: &#x27;green&#x27;,
-        imageBorderWidth: &#x27;5px&#x27;
+        imageBorderWidth: &#x27;5px&#x27;,
+        persists: true
     });
 });</pre>
+                <p><code>persists</code> refers to whether refreshing or leaving and exiting the page will automatically dismiss the popup. Default is <code>false</code>, but if <code>true</code>, it will remember that you opened it.</p>
                 <p>As a demo, this is Photo 51, the famous picture of the DNA double helix. The file is taken from <a href="https://www-project.slac.stanford.edu/wis/images/photo_51.jpg">Stanford's website</a>. Try clicking on it!</p>
                 <div class="overlay-trigger" style="text-align: center;">
                     <img src="https://www-project.slac.stanford.edu/wis/images/photo_51.jpg">
