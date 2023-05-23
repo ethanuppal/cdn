@@ -9,13 +9,13 @@
         <link rel="stylesheet" href="lib/syntax.css">
         <script src="lib/syntax.js"></script>
         <script src="lib/autosyntax.js"></script>
-        <script src="lib/footnotes.js"></script>
+        <script src="lib/footnotes.min.js"></script>
         <script src="lib/overlay.min.js"></script>
         <title>Ethan Uppal's CDN</title>
     </head>
     <body>
         <div class="container">
-            <p>This page lists all the libraries that this cdn can deliver. The files may not be minified. If you want to use one of these libraries, please give appropriate credit: it's the nice thing to do!</p>
+            <p>This page lists all the libraries that this cdn can deliver. If you want to use one of these libraries, please give appropriate credit: it's the nice thing to do!</p>
             <p><b>Library Quick Links</b></p>
             <ul class="showcase-ul">
                 <li><b><a href="#syntax-highlighting">Syntax highlighting</a></b> that works straight away.</li>
@@ -58,10 +58,8 @@ int main() {
             </div>
             <div class="library" id="footnotes">
                 <h2>Footnotes</h2>
-                <p>Load the following file on your webpage.</p>
-                <ul>
-                    <li><a href="lib/footnotes.js">lib/footnotes.js</a></li>
-                </ul>
+                <p>Load the library in your <code>&lt;head&gt;</code>.</p>
+                <pre class="code code-html">&#x3C;script src=&#x22;https://ethanuppal.github.io/cdn/lib/footnotes.min.js&#x22;&#x3E;&#x3C;/script&#x3E;</pre>
                 <p>Set up a location on the page where footnotes will be placed by giving it the id <code>citation-list</code>.</p>
                 <pre class="code code-html">&#x3C;ol id=&#x22;citation-list&#x22; /&#x3E;</pre>
                 <p>Then create inline footnotes using a special <code>&lt;span&gt;</code> element.</p>
@@ -70,6 +68,11 @@ int main() {
     text=&#x22;This is some text.&#x22;
     href=&#x22;https://www.example.com&#x22; rel=&#x22;nofollow&#x22; target=&#x22;_blank&#x22;&#x3E;&#x3C;/span&#x3E;</pre>
                 <p>Only <code>data-cite</code> and either of <code>text</code> or <code>href</code> are necessary.<span data-cite text="You can also supply the url directly via <code>data-cite</code>."></span> To supply a custom number for the footnote, set <code>n</code> (the default is a basic counter). You can set <code>rel</code> and <code>target</code> to modify the properties of the resulting link when supplying <code>href</code>.</p>
+                <p>To access the footnotes, simply inspect the array <code>FootnoteUserElement.list</code> from javascript.</p>
+                <p>Unminified source file:</p>
+                <ul>
+                    <li><a href="lib/footnotes.js">lib/footnotes.js</a></li>
+                </ul>
                 <h3>Notes</h3>
                 <ol id="citation-list" />
             </div>
