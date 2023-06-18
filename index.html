@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="https://ethanuppal.github.io/style.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="lib/syntax.css">
-        <script src="lib/syntax.js"></script>
-        <script src="lib/autosyntax.js"></script>
+        <script src="lib/syntax.min.js"></script>
+        <script src="lib/autosyntax.min.js"></script>
         <script src="lib/footnotes.min.js"></script>
         <script src="lib/overlay.min.js"></script>
         <title>Ethan Uppal's CDN</title>
@@ -27,16 +27,16 @@
                 <h2>Syntax Highlighting</h2>
                 <p>Load the following files on your webpage.</p>
                 <ul>
-                    <li><a href="lib/syntax.js">lib/syntax.js</a></li>
+                    <li><a href="lib/syntax.min.js">lib/syntax.min.js</a></li>
                     <li><a href="lib/syntax.css">lib/syntax.css</a></li>
-                    <li><a href="lib/autosyntax.js">lib/autosyntax.js</a> (optional, but recommended)</li>
+                    <li><a href="lib/autosyntax.min.js">lib/autosyntax.min.js</a> (optional, but recommended)</li>
                 </ul>
                 <p>Then, indicate which <code>&lt;pre&gt;</code> tags should be highlighted by adding <code>code</code> to their class. In addition, add the specific language that the block should be highlighted in, e.g., <code>code-c</code>. If the autosyntax file is not included, you must have manual calls to highlight each block.</p>
-                <p>Example</p>
+                <p>Example:</p>
                 <pre class="code code-html">&#x3C;!-- in your &lt;head&gt; --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://ethanuppal.github.io/cdn/lib/syntax.css&#x22;&#x3E;
-&#x3C;script src=&#x22;https://ethanuppal.github.io/cdn/lib/syntax.js&#x22;&#x3E;&#x3C;/script&#x3E;
-&#x3C;script src=&#x22;https://ethanuppal.github.io/cdn/lib/autosyntax.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://ethanuppal.github.io/cdn/lib/syntax.css&#x22; async defer&#x3E;
+&#x3C;script src=&#x22;https://ethanuppal.github.io/cdn/lib/syntax.js&#x22; async defer&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://ethanuppal.github.io/cdn/lib/autosyntax.js&#x22; async defer&#x3E;&#x3C;/script&#x3E;
 
 &#x3C;!-- in your &lt;body&gt; --&#x3E;
 &#x3C;pre class=&#x22;code code-c&#x22;&#x3E;
@@ -53,14 +53,15 @@ int main() {
             <p>Unminified source files:</p>
             <ul>
                 <li><a href="lib/syntax-dev.js">lib/syntax-dev.js</a></li>
+                <li><a href="lib/autosyntax.js">lib/autosyntax.js</a></li>
                 <li><a href="lib/syntax-dev.css">lib/syntax-dev.css</a></li>
             </ul>
             </div>
             <div class="library" id="footnotes">
                 <h2>Footnotes</h2>
                 <p>Load the library in your <code>&lt;head&gt;</code>.</p>
-                <pre class="code code-html">&#x3C;script src=&#x22;https://ethanuppal.github.io/cdn/lib/footnotes.min.js&#x22;&#x3E;&#x3C;/script&#x3E;</pre>
-                <p>Set up a location on the page where footnotes will be placed by giving it the id <code>citation-list</code>.</p>
+                <pre class="code code-html">&#x3C;script src=&#x22;https://ethanuppal.github.io/cdn/lib/footnotes.min.js&#x22; async defer&#x3E;&#x3C;/script&#x3E;</pre>
+                <p>Set up a location on the page where footnotes will be placed by giving it the id <code>citation-list</code>. Make it an <code>&lt;ol&gt;</code> to enable all the numbering magic.</p>
                 <pre class="code code-html">&#x3C;ol id=&#x22;citation-list&#x22; /&#x3E;</pre>
                 <p>Then create inline footnotes using a special <code>&lt;span&gt;</code> element.</p>
                 <pre class="code code-html">&#x3C;span data-cite
@@ -79,7 +80,7 @@ int main() {
             <div class="library" id="overlay">
                 <h2>Image Overlay</h2>
                 <p>Load the library in your <code>&lt;head&gt;</code>.</p>
-                <pre class="code code-html">&#x3C;script src=&#x22;https://ethanuppal.github.io/cdn/lib/overlay.min.js&#x22;&#x3E;&#x3C;/script&#x3E;</pre>
+                <pre class="code code-html">&#x3C;script src=&#x22;https://ethanuppal.github.io/cdn/lib/overlay.min.js&#x22; async defer&#x3E;&#x3C;/script&#x3E;</pre>
                 <p>Add <code>overlay-trigger</code> to the class list of a div that contains images. The library will present the first child element that is an image or has the class <code>overlay-image</code>.</p>
                 <pre class="code code-html">&#x3C;div class=&#x22;overlay-trigger&#x22;&#x3E;
     &#x3C;img src=&#x22;willbepresented.png&#x22; alt=&#x22;Testing 123&#x22;&#x3E;
