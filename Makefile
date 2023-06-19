@@ -10,9 +10,13 @@ JS_MINIFIED = $(JS_SRC:.js=.min.js)
 serve:
 	$(PY) -m http.server $(PORT)
 
-lib: $(JS_MINIFIED)
+lib: $(JS_MINIFIED) syntax.css
 	rm -f lib/syntax.min.js
 	mv lib/syntax-dev.min.js lib/syntax.min.js
+
+syntax-dev.css:
+syntax.css: syntax-dev.css
+	lessc --compress lib/syntax-dev.css > lib/syntax.css
 
 %.min.js: %.js
 	echo "// Copyright (C) 2022-$(YEAR) Ethan Uppal. All rights reserved." > $@ \

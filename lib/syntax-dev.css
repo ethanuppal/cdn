@@ -17,7 +17,11 @@
 }
 
 .code-c .function, .code-js > .function, .code-css > .css-class {
-    color: pink;
+    color: #3CF;
+}
+
+.code-js > .var {
+    color: #F65;
 }
 
 .code-c .constant {
